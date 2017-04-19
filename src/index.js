@@ -18,7 +18,6 @@ class App extends Component {
         };
 
         this.getLocations = this.getLocations.bind(this);
-        this.loadWeather = this.loadWeather.bind(this);
     }
 
     getLocations() {
