@@ -1,6 +1,6 @@
 # README
 
-A React app that gets a 3 hourly forecast for a specified location from http://www.metoffice.gov.uk/datapoint/.
+A React app that gets a UK 3 hourly forecast for a specified location from http://www.metoffice.gov.uk/datapoint/.
 
 How it works:
 - Gets available locations from the Metoffice data API.
