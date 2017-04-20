@@ -4,6 +4,7 @@ import axios from 'axios';
 import VirtualizedSelect from 'react-virtualized-select'
 import Weather from './components/weather';
 
+var _ = require('lodash');
 require('../style/select-style.css');
 require('../style/weather-style.css');
 
@@ -30,7 +31,9 @@ class App extends Component {
 
         return axios.get(url)
         .then((response) => {
-            const locations = response.data.Locations.Location
+            const data = response.data.Locations.Location
+
+            const locations = _.orderBy(data, "name");
 
             this.setState({ locations });
 
