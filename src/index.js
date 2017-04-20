@@ -5,6 +5,7 @@ import VirtualizedSelect from 'react-virtualized-select'
 import Weather from './components/weather';
 
 require('../style/select-style.css');
+require('../style/weather-style.css');
 
 const BASE_URL = "http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/json/";
 const API_KEY = '<key>';

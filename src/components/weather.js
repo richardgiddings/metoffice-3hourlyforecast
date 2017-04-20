@@ -21,8 +21,8 @@ const Weather = (props) => {
 
             return (
                 <div key={date}>
-                    <div>{date}</div>
-                    <table>
+                    <h3>{date}</h3>
+                    <table className="center">
                         <thead>
                             <tr>
                                 <td>Time</td>
@@ -41,7 +41,7 @@ const Weather = (props) => {
 
     return (
         <div className="weather">
-            {location}
+            <h2>{location}</h2>
             {results}
         </div>
     );
