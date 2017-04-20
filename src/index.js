@@ -57,7 +57,7 @@ class App extends Component {
         var isLoadingExternally = true;
 
         return (
-            <div>
+            <div className="content">
                 <VirtualizedSelect
                     async
                     backspaceRemoves={false}
