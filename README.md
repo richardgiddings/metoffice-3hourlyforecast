@@ -15,4 +15,6 @@ To run:
 
 To do:
 - Display weather data in a friendly way.
-- Obscure the API key.
+
+Problems:
+- The API key is out in the open for anyone to read. For anything other than a personal application the calls should be made server-side.
