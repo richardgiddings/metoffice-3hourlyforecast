@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import VirtualizedSelect from 'react-virtualized-select'
+import Weather from './components/weather';
 
 require('../style/select-style.css');
 
@@ -14,10 +15,12 @@ class App extends Component {
         super(props);
 
         this.state = {
-            locations: []
+            locations: [],
+            weather: null
         };
 
         this.getLocations = this.getLocations.bind(this);
+        this.loadWeather = this.loadWeather.bind(this);
     }
 
     getLocations() {
@@ -40,11 +43,9 @@ class App extends Component {
     loadWeather(value) {
         const url = `${BASE_URL}${value.id}?res=3hourly&key=${API_KEY}`;
 
-        return axios.get(url)
+        axios.get(url)
         .then((response) => {
-            console.log(response);
-
-            return { weather: response };
+            this.setState({ weather: response });
         })
         .catch(function(error) {
             console.log(error);
@@ -68,6 +69,7 @@ class App extends Component {
                     isLoading={isLoadingExternally}
                     matchPos='start'
                 />
+                <Weather data={this.state.weather} />
             </div>
         );
     }
