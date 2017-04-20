@@ -38,8 +38,6 @@ class App extends Component {
     }
 
     loadWeather(value) {
-        console.log(value);
-
         const url = `${BASE_URL}${value.id}?res=3hourly&key=${API_KEY}`;
 
         return axios.get(url)
@@ -54,7 +52,7 @@ class App extends Component {
     }
 
     render() {
-        const { locations, selectedLocation } = this.state;
+        const { locations } = this.state;
         var isLoadingExternally = true;
 
         return (
@@ -64,12 +62,11 @@ class App extends Component {
                     backspaceRemoves={false}
                     labelKey='name'
                     loadOptions={this.getLocations}
-                    onChange={(selectedLocation) => this.setState({ selectedLocation })}
-                    onValueClick={this.loadWeather}
+                    onChange={this.loadWeather}
                     options={locations}
-                    value={selectedLocation}
                     valueKey='id'
                     isLoading={isLoadingExternally}
+                    matchPos='start'
                 />
             </div>
         );
