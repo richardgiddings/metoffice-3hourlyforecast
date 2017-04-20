@@ -3,8 +3,10 @@ import React from 'react';
 const Weather = (props) => {
     console.log(props);
 
-    let labels = props.data.SiteRep.WX;
-    let weather = props.data.SiteRep.DV;
+    if(props.data) {
+        let labels = props.data.data.SiteRep.Wx;
+        let weather = props.data.data.SiteRep.DV;
+    }
 
     return (
         <div>Weather</div>
