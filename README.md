@@ -2,6 +2,8 @@
 
 A React app that gets a UK 3 hourly forecast for a specified location from http://www.metoffice.gov.uk/datapoint/.
 
+Currently I am displaying Temperature, 'feels like' temperature, UV Index and precipitation probablity in a table for each day of the five day forecast. 
+
 How it works:
 - Gets available locations from the Metoffice data API.
 - Uses https://github.com/bvaughn/react-virtualized-select to provide an autocomplete select box to choose a location.
@@ -14,7 +16,7 @@ To run:
 - Include the bundle.js on your HTML page.
 
 To do:
-- Display weather data in a friendly way.
+- Style the weather data. 
 
 Problems:
-- The API key is out in the open for anyone to read. For anything other than a personal application the calls should be made server-side.
+- The API key is out in the open for anyone to read. For anything other than a personal application the calls should probably be made server-side.
