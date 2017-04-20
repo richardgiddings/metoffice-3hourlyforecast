@@ -72,6 +72,7 @@ class App extends Component {
                     valueKey='id'
                     isLoading={isLoadingExternally}
                     matchPos='start'
+                    placeholder='Select a location...'
                 />
                 <Weather data={this.state.weather} />
             </div>
