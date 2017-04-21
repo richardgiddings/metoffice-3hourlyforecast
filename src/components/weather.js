@@ -6,8 +6,6 @@ const Weather = (props) => {
     let location = null;
     let results = null;
 
-    let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-
     if(props.data) {
         let labels = props.data.data.SiteRep.Wx;
         let weather = props.data.data.SiteRep.DV;
@@ -20,8 +18,9 @@ const Weather = (props) => {
                                 .split('-')
                                 .reverse()
                                 .join('/');
-            let d = new Date(day.value);
-            let day_of_week = days[ d.getDay() ];
+
+            let d = new Date(day.value.slice(0, -1))
+            let day_of_week = d.toString().substring(0, 3)
 
             return (
                 <div key={date}>
