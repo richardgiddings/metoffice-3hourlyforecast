@@ -12,7 +12,7 @@ How it works:
 - Once a location has been selected the weather is returned for that location.
 
 To compile:
-- Run **npm build** or **npm start** depending on requirements.
+- Run **npm run build** or **npm start** depending on requirements.
 
 To run:
 - Include the bundle.js on your HTML page.
